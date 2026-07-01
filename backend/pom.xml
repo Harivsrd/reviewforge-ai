@@ -11,8 +11,8 @@
 	<groupId>com.reviewforge</groupId>
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>ReviewForge Backend</name>
+	<description> AI-Powered Pull Request Review Platform Backend</description>
 	<url/>
 	<licenses>
 		<license/>

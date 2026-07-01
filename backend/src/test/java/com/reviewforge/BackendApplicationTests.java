@@ -1,4 +1,4 @@
-package ReviewForge.Backend;
+package com.reviewforge;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
