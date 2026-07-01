@@ -16,8 +16,8 @@ CREATE TABLE users(
 
     avatar_url TEXT,
 
-    created_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 
-    updated_at TIMESTAMP
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 );
