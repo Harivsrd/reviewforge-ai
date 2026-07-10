@@ -1,10 +1,10 @@
 package com.reviewforge.auth.service;
 
 import com.reviewforge.auth.dto.request.LoginRequest;
-import com.reviewforge.auth.dto.response.LoginResponse;
+import com.reviewforge.auth.dto.response.AuthResponse;
 
 public interface AuthService {
     
-    LoginResponse login(LoginRequest request);
+    AuthResponse login(LoginRequest request);
 
 }
