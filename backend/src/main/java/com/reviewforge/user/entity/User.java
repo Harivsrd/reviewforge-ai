@@ -2,10 +2,17 @@ package com.reviewforge.user.entity;
 
 import com.reviewforge.common.constants.AuthProvider;
 import com.reviewforge.common.model.BaseEntity;
-import jakarta.persistence.*;
-import lombok.*;
 
-import java.util.UUID;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
@@ -15,10 +22,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class User extends BaseEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
 
     @Column(name = "full_name", nullable = false)
     private String fullName;
@@ -30,11 +33,6 @@ public class User extends BaseEntity {
     private String password;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private AuthProvider provider;
-
-    @Column(name = "github_id")
-    private Long githubId;
-
-    @Column(name = "avatar_url")
-    private String avatarUrl;
 }
