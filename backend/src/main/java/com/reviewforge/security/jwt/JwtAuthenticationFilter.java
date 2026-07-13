@@ -22,7 +22,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
     private final CustomUserDetailsService userDetailsService;
+    
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
 
+        System.out.println("PATH = " + request.getServletPath());
+
+        return request.getServletPath().equals("/api/v1/github/profile");
+    }
+    
     @Override
     protected void doFilterInternal(
             HttpServletRequest request,
